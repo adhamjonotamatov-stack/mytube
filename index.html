@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="uz">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MyTube — Video Search</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="header">
+      <button id="logo" class="logo" type="button" aria-label="Bosh sahifa">
+        ▶ MyTube
+      </button>
+      <form id="searchForm" class="search-form">
+        <input
+          id="searchInput"
+          type="search"
+          placeholder="Videolarni qidiring..."
+          aria-label="Video qidirish"
+          required
+        />
+        <button id="searchButton" type="submit">Qidirish</button>
+      </form>
+    </header>
+    <main>
+      <p id="status" role="status" aria-live="polite"></p>
+      <section id="searchSection">
+        <h2>Qidiruv natijalari</h2>
+        <div id="videoContainer" class="video-grid"></div>
+      </section>
+      <section id="watchSection" class="hidden">
+        <button id="backButton" class="back-button" type="button">
+          ← Natijalarga qaytish
+        </button>
+        <div class="watch-layout">
+          <div class="main-video">
+            <div id="playerContainer" class="player"></div>
+            <h2 id="videoTitle"></h2>
+            <p id="channelName"></p>
+          </div>
+          <aside>
+            <h3>O‘xshash videolar</h3>
+            <p id="recommendationStatus" role="status" aria-live="polite"></p>
+            <div id="recommendations"></div>
+          </aside>
+        </div>
+      </section>
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>
